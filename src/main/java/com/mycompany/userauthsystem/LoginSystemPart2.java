@@ -1,9 +1,12 @@
 package com.mycompany.userauthsystem;
-
+        
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class UserAuthSystem {
+public class LoginSystemPart2 {
 
     static Scanner input = new Scanner(System.in);
 
@@ -78,7 +81,7 @@ public class UserAuthSystem {
         }
 
         // Register user
-        String registerMessage = UserAuthSystem.registerUser(username, password);
+        String registerMessage = LoginSystemPart2.registerUser(username, password);
         System.out.println(registerMessage);
         storedUsername = username;
         storedPassword = password;
@@ -108,11 +111,15 @@ public class UserAuthSystem {
             System.out.print("Enter Password: ");
             loginPass = input.nextLine();
 
-            status = UserAuthSystem.loginUser(loginUser, loginPass, storedUsername, storedPassword);
+            status = LoginSystemPart2.loginUser(loginUser, loginPass, storedUsername, storedPassword);
 
-            System.out.println(UserAuthSystem.returnLoginStatus(status));
+            System.out.println(LoginSystemPart2.returnLoginStatus(status));
 
             if (status) break; // stop loop on successful login
         }
     }
+
 }
+
+
+        
