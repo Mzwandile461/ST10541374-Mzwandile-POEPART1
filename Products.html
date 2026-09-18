@@ -1,83 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <nav>
-<a href="HOME.html">HOME</a> |
-<a href="Products.html">Products</a> |
-<a href="About.html">About</a> |
-<a href="Contact.html">Contact</a> |
-<a href="FAQ.html">FAQ</a>
-</nav>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mzwandile Mobile - Products</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>MZWANDILE MOBILE</h1>
-<h2>Shop All iPhone Types</h2>
 
+<header class="site-header">
+  <p class="brand">MZWANDILE MOBILE</p>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="Products.html">Products</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li class="nav-cart"><a href="#cart-panel" class="cart-link">Cart <span id="cart-count">0</span></a></li>
+    </ul>
+  </nav>
+</header>
 
+<main class="page-content">
 
+  <h2>Shop All iPhone Types</h2>
+  <hr>
 
-<hr>
+  <section>
+    <h3>All iPhones Available</h3>
+    <p>We sell all iPhone models from iPhone XR to iPhone 17 Pro Max. New, Certified Pre-Owned, and Import.</p>
+  </section>
 
-<h3>All iPhones Available</h3>
-<p>We sell all iPhone models from iPhone XR to iPhone 17 Pro Max. New, Certified Pre-Owned, and Import.</p>
+  <div class="shop-layout">
+    <section class="product-grid">
 
-<h4>1. iPhone XR</h4>
-<img src="IMG/iPhone 11.JPG" width="200" height="200"
-<p>Storage: 64GB / 128GB | Condition: Used / Certified Pre-Owned | Battery Health: 85%+ | Warranty: 6 Months | Price: From R4,500</p>
+      <article class="product-card" data-name="iPhone XR" data-price="4500">
+        <img src="IMG/iPhone 11.JPG" width="200" height="200" alt="iPhone XR">
+        <h4>1. iPhone XR</h4>
+        <p>Storage: 64GB / 128GB | Condition: Used / Certified Pre-Owned | Battery Health: 85%+ | Warranty: 6 Months</p>
+        <p class="price">From R4,500</p>
+        <button class="add-to-cart" type="button" data-name="iPhone XR" data-price="4500">Add to cart</button>
+      </article>
 
+      <article class="product-card" data-name="iPhone 11" data-price="5500">
+        <img src="IMG/iPhone 12.JPG" width="200" height="200" alt="iPhone 11">
+        <h4>2. iPhone 11</h4>
+        <p>Storage: 64GB / 128GB | Condition: New / Used | Colors: Green, Black, White | Warranty: 12 Months</p>
+        <p class="price">From R5,500</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 11" data-price="5500">Add to cart</button>
+      </article>
 
-<h4>2. iPhone 11</h4>
-<img src="IMG/iPhone 12.JPG" width="200" height="200"
-<p>Storage: 64GB / 128GB | Condition: New / Used | Colors: Green, Black, White | Warranty: 12 Months | Price: From R5,500</p>
+      <article class="product-card" data-name="iPhone 12" data-price="6500">
+        <img src="IMG/iPhone 12.JPG" width="200" height="200" alt="iPhone 12">
+        <h4>3. iPhone 12</h4>
+        <p>Storage: 64GB / 128GB / 256GB | Condition: New / Used | 5G Supported</p>
+        <p class="price">From R6,500</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 12" data-price="6500">Add to cart</button>
+      </article>
 
-<h4>3. iPhone 12</h4>
- <img src="IMG/iPhone 12.JPG" width="200" height="200"
-<p>Storage: 64GB / 128GB / 256GB | Condition: New / Used | 5G Supported | Price: From R6,500</p>
+      <article class="product-card" data-name="iPhone 13" data-price="8000">
+        <img src="IMG/iPhone 13.JPG" width="200" height="200" alt="iPhone 13">
+        <h4>4. iPhone 13</h4>
+        <p>Storage: 128GB / 256GB | Condition: New / Used | Color: Pink, Blue, Black</p>
+        <p class="price">From R8,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 13" data-price="8000">Add to cart</button>
+      </article>
 
-<h4>4. iPhone 13</h4>
-<img src="IMG/iPhone 13.JPG" width="200" height="200"
-<p>Storage: 128GB / 256GB | Condition: New / Used | Color: Pink, Blue, Black | Price: From R8,000</p>
+      <article class="product-card" data-name="iPhone 14" data-price="10000">
+        <img src="IMG/iPhone 14.JPG" width="200" height="200" alt="iPhone 14">
+        <h4>5. iPhone 14</h4>
+        <p>Storage: 128GB / 256GB | Yellow, Blue, Black | Warranty: 12 Months</p>
+        <p class="price">From R10,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 14" data-price="10000">Add to cart</button>
+      </article>
 
-<h4>5. iPhone 14</h4>
-<img src="IMG/iPhone 14.JPG" width="200" height="200"
-<p>Storage: 128GB / 256GB | Yellow, Blue, Black | Warranty: 12 Months | Price: From R10,000</p>
+      <article class="product-card" data-name="iPhone 15" data-price="14000">
+        <img src="IMG/iPhone 15.JPG" width="200" height="200" alt="iPhone 15">
+        <h4>6. iPhone 15</h4>
+        <p>Storage: 128GB / 256GB | Pink, Black | USB-C</p>
+        <p class="price">From R14,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 15" data-price="14000">Add to cart</button>
+      </article>
 
+      <article class="product-card" data-name="iPhone 15 Pro Max" data-price="16500">
+        <img src="IMG/iPhone 15 Pro Max.JPG" width="200" height="200" alt="iPhone 15 Pro Max">
+        <h4>7. iPhone 15 Pro Max</h4>
+        <p>Storage: 256GB / 512GB | Natural Titanium | Triple Camera</p>
+        <p class="price">From R16,500</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 15 Pro Max" data-price="16500">Add to cart</button>
+      </article>
 
-<h4>6. iPhone 15</h4> 
-<img src="IMG/iPhone 15.JPG" width="200" height="200"
-<p>Storage: 128GB / 256GB | Pink, Black | USB-C | Price: From R14,000</p>
+      <article class="product-card" data-name="iPhone 16 Pro" data-price="18000">
+        <img src="IMG/iPhone 16 Pro.JPG" width="200" height="200" alt="iPhone 16 Pro">
+        <h4>8. iPhone 16 Pro</h4>
+        <p>Storage: 128GB / 256GB | Natural Titanium | A18 Pro Chip</p>
+        <p class="price">From R18,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 16 Pro" data-price="18000">Add to cart</button>
+      </article>
 
+      <article class="product-card" data-name="iPhone 16 Pro Max" data-price="20000">
+        <img src="IMG/iPhone 16 Pro Max.JPG" width="200" height="200" alt="iPhone 16 Pro Max">
+        <h4>9. iPhone 16 Pro Max</h4>
+        <p>Storage: 256GB / 512GB / 1TB | Black Titanium | Biggest Battery</p>
+        <p class="price">From R20,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 16 Pro Max" data-price="20000">Add to cart</button>
+      </article>
 
-<h4>7. iPhone 15 Pro Max</h4>
-<img src="IMG/iPhone 15 Pro Max.JPG" width="200" height="200"
-<p>Storage: 256GB / 512GB | Natural Titanium | Triple Camera | Price: From R16,500</p>
+      <article class="product-card" data-name="iPhone 17 Pro Max" data-price="25000">
+        <img src="IMG/iPhone 17 Pro Max.JPG" width="200" height="200" alt="iPhone 17 Pro Max">
+        <h4>10. iPhone 17 Pro Max — NEW ARRIVAL</h4>
+        <p>Storage: 256GB / 512GB / 1TB | Dark Blue, Cosmic Orange | Latest Design | 8x Zoom | Biggest Battery Ever</p>
+        <p class="price">From R25,000</p>
+        <button class="add-to-cart" type="button" data-name="iPhone 17 Pro Max" data-price="25000">Add to cart</button>
+      </article>
 
-<h4>8. iPhone 16 Pro</h4>
-<img src="IMG/iPhone 16 Pro.JPG" width="200" height="200"
-<p>Storage: 128GB / 256GB | Natural Titanium | A18 Pro Chip | Price: From R18,000</p>
+    </section>
 
+    <aside class="cart-panel" id="cart-panel" aria-live="polite">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="clear-cart" type="button" class="secondary-button">Clear</button>
+      </div>
+      <ul id="cart-items" class="cart-items">
+        <li class="empty-cart">Your cart is empty.</li>
+      </ul>
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cart-total">R0</strong>
+      </div>
+      <button type="button" class="checkout-button">Checkout</button>
+    </aside>
+  </div>
 
-<h4>9. iPhone 16 Pro Max</h4> 
-<img src="IMG/iPhone 16 Pro Max.JPG" width="200" height="200"
-<p>Storage: 256GB / 512GB / 1TB | Black Titanium | Biggest Battery | Price: From R20,000</p>
+  <section>
+    <h3>Accessories</h3>
+    <ul class="accessory-grid">
+      <li>iPhone Cases - From R150</li>
+      <li>Screen Protectors - From R100</li>
+      <li>Fast Chargers - From R250</li>
+      <li>AirPods - From R1,200</li>
+      <li>Apple Watch - From R3,500</li>
+    </ul>
+  </section>
 
+</main>
 
-<h4>10. iPhone 17 Pro Max - NEW ARRIVAL</h4>    
-<img src="IMG/iPhone 17 Pro Max.JPG" width="200" height="200"
-<p>Storage: 256GB / 512GB / 1TB | Dark Blue, Cosmic Orange | Latest Design | 8x Zoom | Biggest Battery Ever | Price: From R25,000</p>
+<footer class="site-footer">
+  <p>Mzwandile Mobile | Durban, KZN, South Africa | <a href="mailto:sales@mzwandilemobile.co.za">sales@mzwandilemobile.co.za</a></p>
+</footer>
 
+<script>
+  const storageKey = 'mzwandile-mobile-cart';
+  const cartCount = document.getElementById('cart-count');
+  const cartItems = document.getElementById('cart-items');
+  const cartTotal = document.getElementById('cart-total');
+  const clearCartButton = document.getElementById('clear-cart');
 
-<h3>Accessories</h3>
-<ul>
-<li>iPhone Cases - From R150</li>
-<li>Screen Protectors - From R100</li>
-<li>Fast Chargers - From R250</li>
-<li>AirPods - From R1,200</li>
-<li>Apple Watch - From R3,500</li>
-</ul>
+  function loadCart() {
+    try {
+      const savedCart = JSON.parse(localStorage.getItem(storageKey) || '[]');
+      return Array.isArray(savedCart) ? savedCart : [];
+    } catch (error) {
+      return [];
+    }
+  }
 
+  let cart = loadCart();
+
+  function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-ZA', {
+      style: 'currency',
+      currency: 'ZAR',
+      maximumFractionDigits: 0
+    }).format(amount);
+  }
+
+  function saveCart() {
+    localStorage.setItem(storageKey, JSON.stringify(cart));
+  }
+
+  function renderCart() {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    cartCount.textContent = totalItems;
+    cartTotal.textContent = formatCurrency(totalPrice);
+
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<li class="empty-cart">Your cart is empty.</li>';
+      return;
+    }
+
+    cartItems.innerHTML = cart.map(item => `
+      <li class="cart-item">
+        <div>
+          <span class="cart-item-name">${item.name}</span>
+          <span class="cart-item-meta">${item.quantity} x ${formatCurrency(item.price)}</span>
+        </div>
+        <button type="button" class="remove-item" data-name="${item.name}">Remove</button>
+      </li>
+    `).join('');
+
+    document.querySelectorAll('.remove-item').forEach(button => {
+      button.addEventListener('click', () => {
+        const productName = button.dataset.name;
+        cart = cart.filter(item => item.name !== productName);
+        saveCart();
+        renderCart();
+      });
+    });
+  }
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.dataset.name;
+      const price = Number(button.dataset.price);
+      const existingItem = cart.find(item => item.name === name);
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      saveCart();
+      renderCart();
+    });
+  });
+
+  clearCartButton.addEventListener('click', () => {
+    cart = [];
+    saveCart();
+    renderCart();
+  });
+
+  renderCart();
+</script>
 
 </body>
 </html>

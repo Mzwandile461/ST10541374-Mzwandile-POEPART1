@@ -1,0 +1,567 @@
+/* =========================================================
+   MZWANDILE MOBILE — style.css
+   External stylesheet linked from every page (index, Products,
+   About, Contact, FAQ).
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   2.2 Base style / CSS reset
+   --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color tokens */
+  --color-ink: #14151a;        /* near-black, headers/footer */
+  --color-bg: #f1f2f4;         /* cool pale background */
+  --color-surface: #ffffff;    /* card/content surface */
+  --color-accent: #c99a44;     /* titanium gold */
+  --color-accent-deep: #8a691f;/* darker gold for hover/active */
+  --color-slate: #4a5568;      /* secondary text */
+  --color-line: #dcdfe3;       /* hairline borders */
+
+  /* Type scale */
+  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --fs-h1: clamp(1.9rem, 3.2vw, 2.75rem);
+  --fs-h2: clamp(1.4rem, 2.2vw, 1.85rem);
+  --fs-h3: clamp(1.1rem, 1.6vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-accent-deep);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------------------------------------------------------
+   2.3 Typography styles
+   --------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); margin-top: 0.25rem; }
+h3 { font-size: var(--fs-h3); margin-bottom: 0.5rem; }
+
+p {
+  max-width: 65ch;
+  color: var(--color-slate);
+  margin-bottom: 0.9rem;
+}
+
+.page-content p,
+.page-content li {
+  color: var(--color-slate);
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--color-accent-deep);
+  font-size: 1.1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 1.75rem 0;
+}
+
+/* ---------------------------------------------------------
+   2.4 Layout structure (Flexbox / Grid)
+   --------------------------------------------------------- */
+.site-header {
+  background-color: var(--color-ink);
+  padding: 1.1rem 1.5rem;
+}
+
+.site-header .brand {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+}
+
+nav.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+}
+
+nav.main-nav a {
+  color: #d8dade;
+  font-weight: 600;
+  font-size: var(--fs-small);
+  padding: 0.35rem 0.1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+main.page-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero .price-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  font-weight: 700;
+  font-size: var(--fs-small);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  margin-top: 0.5rem;
+}
+
+.feature-list,
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 2rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem 2rem;
+  margin-top: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.site-footer {
+  background-color: var(--color-ink);
+  color: #c7c9ce;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: var(--fs-small);
+}
+
+.site-footer a { color: var(--color-accent); }
+
+/* ---------------------------------------------------------
+   2.5 Visual styles: color, background, border, box-shadow
+   --------------------------------------------------------- */
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(20, 21, 26, 0.06);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.product-card img {
+  border-radius: calc(var(--radius) - 2px);
+  margin-bottom: 0.75rem;
+  background-color: var(--color-bg);
+}
+
+.product-card .price {
+  color: var(--color-accent-deep);
+  font-weight: 700;
+}
+
+.info-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------
+   CSS pseudo-classes for interactive elements
+   --------------------------------------------------------- */
+nav.main-nav a:hover,
+nav.main-nav a:focus {
+  color: #ffffff;
+  border-bottom-color: var(--color-accent);
+}
+
+nav.main-nav a:active {
+  color: var(--color-accent);
+}
+
+a:focus-visible,
+.cta-button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.product-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(20, 21, 26, 0.12);
+  transform: translateY(-2px);
+}
+
+.cta-button:hover {
+  background-color: var(--color-accent-deep);
+  color: #fff;
+}
+
+.cta-button:active {
+  background-color: var(--color-ink);
+  color: var(--color-accent);
+}
+
+.faq-list li:hover {
+  color: var(--color-ink);
+}
+
+/* ---------------------------------------------------------
+   Product shop + cart layout
+   --------------------------------------------------------- */
+.shop-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(260px, 360px);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.nav-cart {
+  margin-left: 0.5rem;
+}
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(201, 154, 68, 0.12);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(201, 154, 68, 0.4);
+}
+
+#cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(20, 21, 26, 0.06);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.product-card img {
+  border-radius: calc(var(--radius) - 2px);
+  margin-bottom: 0.75rem;
+  background-color: var(--color-bg);
+}
+
+.product-card .price {
+  color: var(--color-accent-deep);
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.add-to-cart,
+.secondary-button,
+.checkout-button,
+.remove-item {
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.add-to-cart,
+.checkout-button {
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  padding: 0.8rem 1rem;
+}
+
+.secondary-button {
+  background-color: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  padding: 0.6rem 0.75rem;
+  width: auto;
+  margin-top: 0;
+}
+
+.remove-item {
+  background: transparent;
+  color: var(--color-accent-deep);
+  width: auto;
+  margin-top: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.add-to-cart:hover,
+.checkout-button:hover,
+.secondary-button:hover,
+.remove-item:hover {
+  opacity: 0.9;
+}
+
+.cart-panel {
+  position: sticky;
+  top: 1rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(20, 21, 26, 0.08);
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+}
+
+.cart-item-name,
+.cart-item-meta {
+  display: block;
+}
+
+.cart-item-name {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.cart-item-meta {
+  font-size: 0.8rem;
+  color: var(--color-slate);
+}
+
+.empty-cart {
+  color: var(--color-slate);
+  padding: 0.8rem 0;
+}
+
+.cart-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-line);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.checkout-button {
+  margin-top: 1rem;
+}
+
+/* =========================================================
+   3. RESPONSIVE DESIGN
+   Breakpoints: tablet <= 1024px, mobile <= 640px
+   ========================================================= */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  /* 3.1 / adjustment - layout */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accessory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main.page-content {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  /* adjustment - typography */
+  :root {
+    --fs-h1: clamp(1.6rem, 4vw, 2.2rem);
+    --fs-h2: clamp(1.25rem, 3vw, 1.6rem);
+  }
+
+  p { max-width: 60ch; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  /* adjustment - navigation menu: stack into a full-width column
+     with larger tap targets instead of a horizontal row */
+  .site-header {
+    padding: 1rem;
+  }
+
+  nav.main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #2a2b31;
+    margin-top: 0.5rem;
+  }
+
+  nav.main-nav a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid #2a2b31;
+    border-radius: 0;
+  }
+
+  /* adjustment - layout: everything collapses to one column */
+  .product-grid,
+  .accessory-grid,
+  .feature-list,
+  .faq-list,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main.page-content {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .hero .price-badge {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  /* adjustment - typography: tighten scale further for small screens */
+  :root {
+    --fs-h1: clamp(1.4rem, 6vw, 1.8rem);
+    --fs-h2: clamp(1.15rem, 5vw, 1.4rem);
+    --fs-h3: 1.05rem;
+    --fs-body: 0.95rem;
+  }
+
+  p {
+    max-width: 100%;
+  }
+
+  /* adjustment - images: product photos shrink and center on
+     narrow screens instead of holding a fixed 200px box */
+  .product-card img {
+    width: 100%;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info-card {
+    padding: 1rem 1.1rem;
+  }
+}
