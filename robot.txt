@@ -1,0 +1,10 @@
+# robots.txt for Mzwandile Mobile
+# Allow all well-behaved crawlers to index the public pages.
+User-agent: *
+Allow: /
+# Keep crawlers away from non-content files
+Disallow: /404.html
+Disallow: /vendor/
+
+# Sitemap location (update the domain if you deploy somewhere else)
+Sitemap: https://mzwandile-mobile.netlify.app/sitemap.xml
